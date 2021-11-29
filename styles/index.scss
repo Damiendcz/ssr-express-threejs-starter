@@ -1,5 +1,5 @@
-$color-white: #fff;
-
-.class {
-  color: $color-white;
-}
+@import './base/reset';
+@import './base/base';
+@import './partials/navigation';
+@import './partials/preloader';
+@import './pages/home';

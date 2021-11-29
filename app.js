@@ -1,8 +1,19 @@
 require('dotenv').config()
+const errorHandler = require('errorhandler')
+const logger = require('morgan')
+const methodOverride = require('method-override')
 const express = require('express')
 const path = require('path')
 const app = express()
 const port = 3000
+
+// MiddleWare
+app.use(logger('dev'))
+app.use(errorHandler())
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(methodOverride())
+app.use(express.static(path.join(__dirname, 'public')))
 
 const Prismic = require('@prismicio/client')
 const PrismicDOM = require('prismic-dom')

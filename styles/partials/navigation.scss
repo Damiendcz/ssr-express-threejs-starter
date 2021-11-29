@@ -1,0 +1,15 @@
+.navigation {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: space-around;
+  color: wheat;
+}
+
+.navigation__wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
